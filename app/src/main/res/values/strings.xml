@@ -1,11 +1,23 @@
 <resources>
+
+
     <string name="app_name">Tic Tac Toe</string>
 
 
-    <string name="interstitial_full_screen1">ca-app-pub-5809082953640465/9114373632</string>
+    <string name="interstitial_full_screen1">ca-app-pub-5809082953640465/4997420596</string>
 
 
-    <string name="banner_home_footer_1">ca-app-pub-5809082953640465/1870308434</string>
+    <string name="banner_home_footer_1">ca-app-pub-5809082953640465/5036060998</string>
 
 
+    <string name="btnNewGame">New Game</string>
+    <string name="btnNewGameCPU">New Game vs CPU</string>
+    <string name="btnEasy">Easy</string>
+    <string name="btnNormal">Normal</string>
+    <string name="btnHard">Hard</string>
+    <string name="btnImpossible">Impossible</string>
+    <string name="title">Tic Tac Toe</string>
+    <string name="difficulty">Select Difficulty</string>
+    <string name="txtPlayer">Player:</string>
+    <string name="txtCPU">CPU:</string>
 </resources>

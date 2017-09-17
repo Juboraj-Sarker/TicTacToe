@@ -13,7 +13,8 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".HomeScreenActivity"
+        <activity
+            android:name=".activity.HomeScreenActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,32 +22,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MultiPlayerActivity"
-            android:label="Multi Player"
-            android:screenOrientation="portrait"/>
-
-
-        <activity android:name=".SinglePlayerActivity"
-            android:label="Single Player"
-            android:screenOrientation="portrait">
-
-
-        </activity>
-
-
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
-
-
-        <activity android:name=".AboutMeActivity"
+        <activity
+            android:name=".activity.AboutMeActivity"
             android:label="About me"
-            android:screenOrientation="portrait">
-
-
-        </activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.GameScreenActivity" />
+        <activity android:name=".activity.DifficultySelectionScreenActivity"></activity>
     </application>
 
 </manifest>

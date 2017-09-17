@@ -5,11 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background"
-    tools:context="com.juboraj_sarker.tictactoe.activity.HomeScreenActivity">
-
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.juboraj_sarker.tictactoe.activity.DifficultySelectionScreenActivity">
 
 
     <android.support.v7.widget.Toolbar
@@ -28,16 +26,28 @@
 
 
 
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
+        android:baselineAligned="false"
         android:gravity="center_vertical"
         android:layout_alignParentLeft="true">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/difficulty"
+            android:id="@+id/title"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="normal"
+            android:typeface="normal"
+            android:textSize="30sp"
+            android:elegantTextHeight="false"
+            android:autoText="false" />
 
         <Space
             android:layout_width="match_parent"
@@ -48,44 +58,37 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="NEW GAME (Between 2 Player)"
-            android:id="@+id/btnNewGame"
-            android:textAllCaps="false"/>
+            android:text="@string/btnEasy"
+            android:id="@+id/btnEasy" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="NEW GAME (With CPU)"
-            android:id="@+id/btnNewGameCPU"
-            android:textAllCaps="false"/>
-
+            android:text="@string/btnNormal"
+            android:id="@+id/btnNormal" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ABOUT"
-            android:id="@+id/aboutBTN"
-            android:onClick="about"
-            android:textAllCaps="false"/>
+            android:text="@string/btnHard"
+            android:id="@+id/btnHard" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnImpossible"
+            android:id="@+id/btnImpossible" />
     </LinearLayout>
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            ads:adSize="SMART_BANNER"
-            ads:adUnitId="@string/banner_home_footer_1">
-        </com.google.android.gms.ads.AdView>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_home_footer_1">
+    </com.google.android.gms.ads.AdView>
 
 
-
-    </RelativeLayout>
-
-
-
-
-
-
+</RelativeLayout>

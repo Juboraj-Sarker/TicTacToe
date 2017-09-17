@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.juboraj_sarker.tictactoe.activity.GameScreenActivity">
+
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/statusBar"
+        android:elevation="4dp"
+        android:subtitleTextColor="#fff"
+        android:theme="@style/ToolbarStyle"
+        android:title="About me"
+        android:titleTextColor="#fff"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:subtitleTextColor="#fff"
+        app:titleTextColor="#fff" />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:gravity="center|center_horizontal">
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.26"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/player_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/txtPlayer"
+                android:layout_weight="0.05"
+                android:paddingLeft="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0"
+                android:id="@+id/txtPlayerScore"
+                android:layout_weight="0.14"
+                android:numeric="integer" />
+
+            <TextView
+                android:id="@+id/cpu_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/txtCPU"
+                android:textAlignment="gravity"
+                android:layout_weight="0.49"
+                android:gravity="right" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text=" 0"
+                android:id="@+id/txtCPUScore"
+                android:layout_weight="0.05"
+                android:numeric="integer" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/difficulty_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Difficulty Level"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btnTL"
+                    android:layout_column="0"
+                    android:layout_weight="0"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:textSize="50sp" />
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/btnTM"
+                    android:layout_column="1"
+                    android:textSize="50sp" />
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/btnTR"
+                    android:layout_column="2"
+                    android:textSize="50sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/btnML"
+                    android:layout_column="0"
+                    android:textSize="50sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnMM"
+                    android:layout_column="1"
+                    android:textSize="50sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnMR"
+                    android:layout_column="2"
+                    android:textSize="50sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btnBL"
+                    android:layout_column="0"
+                    android:layout_height="100dp"
+                    android:layout_width="match_parent"
+                    android:textSize="50sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnBM"
+                    android:layout_column="1"
+                    android:textSize="50sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnBR"
+                    android:layout_column="2"
+                    android:textSize="50sp" />
+            </TableRow>
+        </TableLayout>
+
+
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_home_footer_1">
+        </com.google.android.gms.ads.AdView>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
