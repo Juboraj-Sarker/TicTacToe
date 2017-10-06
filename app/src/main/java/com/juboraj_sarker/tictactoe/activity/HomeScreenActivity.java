@@ -1,7 +1,6 @@
 package com.juboraj_sarker.tictactoe.activity;
 
 import android.content.ActivityNotFoundException;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -15,7 +14,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 
 import com.google.android.gms.ads.AdListener;
@@ -48,7 +46,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
 
-        MobileAds.initialize(getApplicationContext(), "ca-app-pub-5809082953640465/5036060998");
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-5809082953640465/7040061742");
         AdView mAdView = (AdView) findViewById(R.id.adView1);
         AdRequest adRequest = new AdRequest.Builder().addTestDevice("93448558CC721EBAD8FAAE5DA52596D3").build();
         mAdView.loadAd(adRequest);
@@ -133,24 +131,18 @@ public class HomeScreenActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
 
-                InputMethodManager inputManager = (InputMethodManager)
-                        getSystemService(Context.INPUT_METHOD_SERVICE);
-
-                inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-
-
                 AlertDialog.Builder builder;
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Light_Dialog);
                 } else {
                     builder = new AlertDialog.Builder(this);
                 }
-                builder.setTitle("Are you sure?\nYou want to really exit?")
-                        .setMessage("----------------------------------------------------\nTouch on 'YES' button if you want to really exit.\n\nOtherwise touch on 'CANCEL' button if you don't want to exit.")
+                builder.setTitle("Thanks for using my app")
+                        .setMessage("\nAre you sure you want to really exit?")
                         .setPositiveButton("YES", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
 
-                                System.exit(0);
+                                AppExit();
                             }
                         })
                         .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
@@ -158,7 +150,6 @@ public class HomeScreenActivity extends AppCompatActivity {
                                 dialog.cancel();
                             }
                         })
-                        .setIcon(android.R.drawable.ic_dialog_alert)
                         .show();
 
 
@@ -169,6 +160,22 @@ public class HomeScreenActivity extends AppCompatActivity {
 
 
     }
+
+
+
+
+    public void AppExit() {
+
+        this.finish();
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+
+
+    }
+
+
 
 
     public void rate(MenuItem item) {

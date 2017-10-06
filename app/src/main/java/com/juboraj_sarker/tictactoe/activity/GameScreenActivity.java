@@ -83,7 +83,7 @@ public class GameScreenActivity extends AppCompatActivity {
         difficultyTV = (TextView) findViewById(R.id.difficulty_TV);
 
 
-        MobileAds.initialize(getApplicationContext(), "ca-app-pub-5809082953640465/5036060998");
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-5809082953640465/7040061742");
         AdView mAdView = (AdView) findViewById(R.id.adView1);
         AdRequest adRequest = new AdRequest.Builder().addTestDevice("93448558CC721EBAD8FAAE5DA52596D3").build();
         mAdView.loadAd(adRequest);
